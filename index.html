@@ -3,33 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Marika Swanberg - Machine Learning Engineer & Researcher specializing in Differential Privacy and Cryptography.">
-    <title>Marika Swanberg | Researcher & Engineer</title>
+    <meta name="description" content="Marika Swanberg's home page.">
+    <title>Marika Swanberg | Research Scientist </title>
     <style>
-        /* Basic CSS for readability - You can replace this with a separate .css file */
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; max-width: 900px; margin: 0 auto; padding: 20px; }
-        header { text-align: center; margin-bottom: 40px; border-bottom: 1px solid #eaeaea; padding-bottom: 20px; }
-        h1 { margin-bottom: 5px; color: #2c3e50; }
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            line-height: 1.6; 
+            color: #333; 
+            max-width: 900px; 
+            margin: 0 auto; 
+            padding: 20px; 
+        }
+
+        /* Flexbox Header to put Image on Left, Text on Right */
+        header { 
+            display: flex; 
+            align-items: center; 
+            gap: 30px; 
+            margin-bottom: 40px; 
+            border-bottom: 1px solid #eaeaea; 
+            padding-bottom: 30px; 
+        }
+
+        .profile-pic {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%; 
+            object-fit: cover; 
+            border: 4px solid #f4f4f4;
+            flex-shrink: 0; /* Prevents the image from getting squished */
+        }
+
+        .header-text {
+            flex: 1;
+        }
+
+        h1 { margin: 0 0 5px 0; color: #2c3e50; }
         h2 { color: #2c3e50; border-bottom: 2px solid #f4f4f4; padding-bottom: 10px; margin-top: 40px; }
-        .subtitle { color: #666; font-size: 1.1em; }
-        .social-links a { margin: 0 10px; text-decoration: none; color: #0066cc; font-weight: bold; }
-        .paper { margin-bottom: 20px; }
-        .paper-title { font-weight: bold; font-size: 1.05em; }
-        .authors { font-style: italic; color: #555; }
-        .venue { color: #777; font-size: 0.9em; }
+        
+        .subtitle { color: #666; font-size: 1.1em; margin-bottom: 10px; }
+        .social-links a { text-decoration: none; color: #0066cc; font-weight: bold; }
+        
+        .paper { margin-bottom: 25px; }
+        .paper-title { font-weight: bold; font-size: 1.05em; display: block; }
+        .authors { font-style: italic; color: #555; display: block; }
+        .venue { color: #777; font-size: 0.9em; display: block; margin-bottom: 5px; }
+        
         footer { margin-top: 50px; text-align: center; font-size: 0.8em; color: #888; }
+
+        /* Responsive: stack image on top of text on mobile phones */
+        @media (max-width: 600px) {
+            header { flex-direction: column; text-align: center; }
+        }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>Marika Swanberg</h1>
-        <p class="subtitle">AI Agent Safety Engineer & Researcher in Google Chrome</p>
+        <img src="portrait.jpeg" alt="Dr. Marika Swanberg" class="profile-pic">
         
-        <div class="social-links">
-            <a href="https://scholar.google.com/citations?user=IoyQ-30AAAAJ&hl=en" target="_blank">Google Scholar</a> |
-            <a href="https://www.linkedin.com/in/marika-swanberg" target="_blank">LinkedIn</a> |
-            <a href="https://github.com/marika-swanberg" target="_blank">GitHub</a>
+        <div class="header-text">
+            <h1>Dr. Marika Swanberg</h1>
+            <p class="subtitle">Research Scientist @ Google</p>
+            
+            <div class="social-links">
+                <a href="https://scholar.google.com/citations?user=IoyQ-30AAAAJ&hl=en" target="_blank">Google Scholar</a> |
+                <a href="https://www.linkedin.com/in/marika-swanberg" target="_blank">LinkedIn</a> |
+                <a href="https://github.com/marika-swanberg" target="_blank">GitHub</a>
+            </div>
         </div>
     </header>
 
@@ -37,12 +78,11 @@
         <h2>About Me</h2>
         <div class="bio">
             <p>
-                I am an AI Safety Engineer and Researcher on the Chrome team at Google in New York City. 
-                I design and productionize safety mechanisms for AI agents (see this <a href="https://security.googleblog.com/2025/12/architecting-security-for-agentic.html">blog post</a> featuring my team's work). I was briefly a part of the Privacy Sandbox where I did in-house differential privacy research for private model training at scale.
+                I'm a research scientist at Google Research (New York City), on <a href="https://pritishkamath.github.io/"> Pritish Kamath's</a> team. I work broadly on topics spanning privacy, threat modeling, and AI. Previously, I worked on the Chrome AI agent safety team where I designed safety mechanisms for chrome autobrowse (see this <a href="https://security.googleblog.com/2025/12/architecting-security-for-agentic.html">blog post</a> featuring my team's work). I was briefly a part of the Privacy Sandbox where I did in-house differential privacy research for private model training at scale.
             </p>
             <p>
                 Prior to joining Google, I completed my PhD in Computer Science at Boston University, where I was advised by 
-                <a href="https://cs-people.bu.edu/ads22/">Adam Smith</a> and served as a Hariri Institute Graduate Student Fellow. My research focused on <strong>differential privacy </strong>, and I also worked on semi-related topics like: <a href="https://arxiv.org/abs/2410.19482">measuring pretraining data memorization by LLMs</a>, <a href="https://arxiv.org/abs/2210.07876">formalizing the Right to Be Forgotten</a>, and <a href="https://eprint.iacr.org/2022/376">modeling secure mesaging in the universal composability framework</a>.
+                <a href="https://cs-people.bu.edu/ads22/">Adam Smith</a> and served as a Hariri Institute Graduate Student Fellow. My research focused on differential privacy, and I also worked on semi-related topics like: <a href="https://arxiv.org/abs/2410.19482">measuring pretraining data memorization by LLMs</a>, <a href="https://arxiv.org/abs/2210.07876">formalizing the Right to Be Forgotten</a>, and <a href="https://eprint.iacr.org/2022/376">modeling secure messaging in the universal composability framework</a>.
                 
             </p>
             <h3>Persistent themes in my work</h3>
@@ -102,6 +142,7 @@
         <ul>
             <li>I am half Swedish and half American (native bilingual, etc.).</li>
             <li>I enjoy swimming very much.</li>
+            <li>I'm a certified freediver (AIDA 2 so far) and I prefer life below the surface. </li>
             </ul>
        
     </section>
@@ -117,8 +158,9 @@
         </ul>
     </section>
 
+
     <footer>
-        <p>&copy; 2026 Marika Swanberg. All rights reserved. This website was last updated on Jan 15, 2026.</p>
+        <p>&copy; 2026 Dr. Marika Swanberg. Last updated Jan 15, 2026.</p>
     </footer>
 
 </body>
